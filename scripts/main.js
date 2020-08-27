@@ -1,3 +1,5 @@
-import { BusinessListComponent } from "./BusinessList.js"
+import { nYBusinessListComponent } from "./BusinessList.js"
 
-BusinessListComponent();
+// BusinessListComponent();
+// stopped the invokation to display different data
+nYBusinessListComponent()
