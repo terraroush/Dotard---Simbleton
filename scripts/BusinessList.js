@@ -4,16 +4,17 @@ import { BusinessComponent } from "./Business.js"
 const contentTarget = document.querySelector(".businessList--newYork");
 
 const newYorkArray = UseBusinessesArr();
-newYorkArray.filter(busObj => {
+const newArray = newYorkArray.filter(busObj => {
     if(busObj.addressStateCode === "NY") {
         return true;
-    }
+    } 
 })
+// console.log(newArray)
 
 export const nYBusinessListComponent = () => {
     contentTarget.innerHTML = "<h1>New York Businesses</h1>";
 
-    newYorkArray.forEach(busObj => 
+    newArray.forEach(busObj => 
         contentTarget.innerHTML += BusinessComponent(busObj)
     )
 }
