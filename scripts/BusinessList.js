@@ -5,7 +5,7 @@ const contentTarget = document.querySelector(".businesses");
 
 export const BusinessListComponent = () => {
     const businessArr = UseBusinessesArr();
-    contentTarget.innerHTML = "<h1>Businesses</h1>";
+    contentTarget.innerHTML = "<h1>Active Businesses</h1>";
     
     businessArr.forEach(
         (busObj) => {
