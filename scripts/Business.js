@@ -1,5 +1,8 @@
 export const BusinessComponent = (busObj) => {
     return `
-    <div>${busObj.companyName}</div>
+    <h3>${busObj.companyName}</h3>
+    <div>${busObj.addressFullStreet}</div>
+    <div>${busObj.addressCity}, ${busObj.addressStateCode} ${busObj.addressZipCode}</div>
+    <hr>
     `
 }
