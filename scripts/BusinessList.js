@@ -1,32 +1,19 @@
 import { UseBusinessesArr } from "./BusinessProvider.js"
 import { BusinessComponent } from "./Business.js"
 
-const contentTarget = document.querySelector(".businessList--newYork");
+const contentTarget = document.querySelector(".businessList--manufacturing");
 
-const newYorkArray = UseBusinessesArr();
-const newArray = newYorkArray.filter(busObj => {
-    if(busObj.addressStateCode === "NY") {
+const businessArray = UseBusinessesArr();
+const newArray = businessArray.filter(busObj => {
+    if(busObj.companyIndustry === "Manufacturing") {
         return true;
     } 
 })
-// console.log(newArray)
 
-export const nYBusinessListComponent = () => {
-    contentTarget.innerHTML = "<h1>New York Businesses</h1>";
+export const businessListComponent = () => {
+    contentTarget.innerHTML = "<h1>Manufacturing Businesses</h1>";
 
     newArray.forEach(busObj => 
         contentTarget.innerHTML += BusinessComponent(busObj)
     )
 }
-
-
-
-// const contentTarget = document.querySelector(".businesses");
-
-// export const BusinessListComponent = () => {
-//     const businessArr = UseBusinessesArr();
-//     contentTarget.innerHTML = "<h1>Active Businesses</h1>";
-    
-//         }
-//     );
-// }
